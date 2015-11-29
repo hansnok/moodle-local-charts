@@ -31,9 +31,13 @@ function drawChart(Y, activitiesdata, title) {
     var options = {
         title: title,
         is3D: true,
-        pieHole: 0.4,
+        width: 800,
+        height: 800,         
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('activities_chart'));
+    google.visualization.events.addListener(chart, 'ready', function () {
+        document.getElementById('save_as_png_activitiesbreakdown').innerHTML = '<a href="' + chart.getImageURI() + '">Printable version</a>';
+    });
     chart.draw(data, options);
 }

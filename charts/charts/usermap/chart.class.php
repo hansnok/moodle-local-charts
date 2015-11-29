@@ -54,7 +54,8 @@ class chart_usermap extends chart {
                 $name . '/js/' . $name . '.js') );
         $PAGE->requires->js_init_call('drawRegionsMap', array('geodata' => $data)); 
 
-        echo html_writer::tag('div', '', array('id' => 'regions_chart', 'style' => 'width: 800px; height: 500px;'));
+        echo html_writer::tag('div', '', array('id' => 'regions_chart'));
+        echo html_writer::tag('div', '', array('id' => 'save_as_png_usermap'));
     }
 
 }

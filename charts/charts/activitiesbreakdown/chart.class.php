@@ -65,7 +65,8 @@ class chart_activitiesbreakdown extends chart {
                     'title' => get_string('pluginname', 'chart_activitiesbreakdown')
                     )); 
 
-        echo html_writer::tag('div', '', array('id' => 'activities_chart', 'style' => 'width: 800px; height: 800px;'));
+        echo html_writer::tag('div', '', array('id' => 'activities_chart'));
+        echo html_writer::tag('div', '', array('id' => 'save_as_png_activitiesbreakdown'));
     }
 
 }

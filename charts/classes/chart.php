@@ -33,7 +33,7 @@ use core\plugininfo\base,
 
 defined('MOODLE_INTERNAL') || die();
 
-class simplecheck extends base {
+class chart extends base {
 
     public function load_settings(part_of_admin_tree $adminroot, $parentnodename, $hassiteconfig) {
         global $CFG, $USER, $DB, $OUTPUT, $PAGE; // In case settings.php wants to refer to them.

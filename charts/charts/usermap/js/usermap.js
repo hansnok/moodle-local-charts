@@ -27,7 +27,13 @@ google.load("visualization", "1", {packages: ["geochart"]});
 
 function drawRegionsMap(Y, geodata) {
     var data = google.visualization.arrayToDataTable(geodata);
-    var options = {};
+    var options = {
+        width: 800,
+        height: 500
+    };
     var chart = new google.visualization.GeoChart(document.getElementById('regions_chart'));
+    google.visualization.events.addListener(chart, 'ready', function () {
+        document.getElementById('save_as_png_usermap').outerHTML = '<a href="' + chart.getImageURI() + '">Printable version</a>';
+    });
     chart.draw(data, options);
 }
